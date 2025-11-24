@@ -143,6 +143,7 @@ $# = 3
 * `enhanced_numbers.sh` (script file)
 * `LAB3.md` (this explanation)
 * Export as **PDF** for submission
-
+ terminal screenshots
+ ![alt text](<lab 2.3.png>)
 ---
 

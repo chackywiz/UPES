@@ -1,25 +1,27 @@
-````markdown
-# 🐧 Assignment 1 – Unit-1: Linux Basics  
 
-**🎯 Objective:** Practice essential Linux commands and run sample lab scripts (Lab3 & Lab5).  
+
+# 🐧 Assignment 1 – Unit-1: Linux Basics
+
+**🎯 Objective:** Practice essential Linux commands and run sample lab scripts (Lab3 & Lab5).
 
 ---
 
 ## 📂 Selected Lab Files
-- ✅ Lab3.sh  
-- ✅ Lab5.sh  
+
+* ✅ Lab3.sh
+* ✅ Lab5.sh
 
 ---
 
-## ⚙️ Commands, Outputs & Explanations  
+## ⚙️ Commands, Outputs & Explanations
 
 ---
 
 ### 🔹 1. `pwd` – Print Working Directory
-**Command:**
+
 ```bash
 pwd
-````
+```
 
 **Output:**
 
@@ -27,15 +29,12 @@ pwd
 /home/student/Unit-1
 ```
 
-**Explanation:**
-Prints the **current working directory**. Useful for confirming location before running scripts.
+📌 Prints the **current working directory**.
 
 ---
 
 ### 🔹 2. `ls` – List Directory Contents
 
-**Command:**
-
 ```bash
 ls
 ```
@@ -43,37 +42,24 @@ ls
 **Output (sample):**
 
 ```bash
-Lab3.sh  Lab5.sh  Documents  Downloads  Pictures  Videos
+Lab3.sh  Lab5.sh  Documents  Downloads
 ```
 
-**Explanation:**
-Lists files and folders in the current directory. With `-l` it shows detailed info, and with `-a` it shows hidden files.
+📌 Lists files and folders. `ls -l` → details, `ls -a` → hidden files.
 
 ---
 
 ### 🔹 3. `mkdir` – Make Directory
 
-**Command:**
-
 ```bash
 mkdir testfolder
-ls
 ```
 
-**Output (sample):**
-
-```bash
-Lab3.sh  Lab5.sh  testfolder
-```
-
-**Explanation:**
-Creates a new directory (folder).
+📌 Creates a new folder.
 
 ---
 
 ### 🔹 4. `cd` – Change Directory
-
-**Command:**
 
 ```bash
 cd testfolder
@@ -86,312 +72,249 @@ pwd
 /home/student/Unit-1/testfolder
 ```
 
-**Explanation:**
-Moves between directories. `cd ..` goes back, `cd ~` returns to home.
+📌 Moves between directories.
 
 ---
 
-### 🔹 5. `rmdir` – Remove Directory
-
-**Command:**
+### 🔹 5. `rmdir` – Remove Empty Directory
 
 ```bash
 rmdir testfolder
 ```
 
-**Output:**
-
-```bash
-(no output if successful)
-```
-
-**Explanation:**
-Removes an **empty directory**.
-
 ---
 
 ### 🔹 6. `touch` – Create Empty File
 
-**Command:**
-
 ```bash
 touch file1.txt
-ls
 ```
 
-**Output:**
-
-```bash
-file1.txt  Lab3.sh  Lab5.sh
-```
-
-**Explanation:**
-Creates an empty file or updates timestamp.
+📌 Creates empty file / updates timestamp.
 
 ---
 
-### 🔹 7. `cp` – Copy File
-
-**Command:**
+### 🔹 7. `cp` – Copy Files
 
 ```bash
 cp file1.txt file2.txt
-ls
 ```
-
-**Output:**
-
-```bash
-file1.txt  file2.txt  Lab3.sh  Lab5.sh
-```
-
-**Explanation:**
-Copies files. With `-r` it can copy directories.
 
 ---
 
-### 🔹 8. `mv` – Move or Rename File
-
-**Command:**
+### 🔹 8. `mv` – Move / Rename Files
 
 ```bash
 mv file2.txt renamed.txt
-ls
 ```
-
-**Output:**
-
-```bash
-file1.txt  renamed.txt  Lab3.sh  Lab5.sh
-```
-
-**Explanation:**
-Moves files into another folder or renames them.
 
 ---
 
-### 🔹 9. `rm` – Remove File
-
-**Command:**
+### 🔹 9. `rm` – Delete Files
 
 ```bash
 rm renamed.txt
 ```
 
-**Output:**
-
-```bash
-(no output if successful)
-```
-
-**Explanation:**
-Deletes a file. With `-r` it can delete folders and contents.
-
 ---
 
-### 🔹 10. `cat` – View File Content
-
-**Command:**
+### 🔹 10. `cat` – View File
 
 ```bash
 cat file1.txt
 ```
 
-**Output (sample):**
-
-```bash
-Hello Linux
-```
-
-**Explanation:**
-Displays the contents of a file in the terminal.
-
 ---
 
-### 🔹 11. `nano` – Open File in Text Editor
-
-**Command:**
+### 🔹 11. `nano` – Text Editor
 
 ```bash
 nano file1.txt
 ```
 
-**Explanation:**
-Opens file in **nano editor**. Save with `CTRL+O`, exit with `CTRL+X`.
-
 ---
 
-### 🔹 12. `clear` – Clear Terminal
-
-**Command:**
+### 🔹 12. `clear` – Clear Screen
 
 ```bash
 clear
 ```
 
-**Explanation:**
-Clears the terminal screen. Shortcut: **Ctrl+L**.
-
 ---
 
 ### 🔹 13. `echo` – Print Text
-
-**Command:**
 
 ```bash
 echo "Hello World"
 ```
 
-**Output:**
-
-```bash
-Hello World
-```
-
-**Explanation:**
-Prints text or variables in the terminal.
-
 ---
 
-### 🔹 14. `man` – Manual Page
-
-**Command:**
+### 🔹 14. `man` – Manual Pages
 
 ```bash
 man ls
 ```
 
-**Explanation:**
-Opens the manual for a command. Press **q** to quit.
-
 ---
 
 ### 🔹 15. `whoami` – Current User
-
-**Command:**
 
 ```bash
 whoami
 ```
 
-**Output:**
-
-```bash
-student
-```
-
-**Explanation:**
-Displays the currently logged-in user.
-
 ---
 
 ### 🔹 16. `who` – Logged-in Users
-
-**Command:**
 
 ```bash
 who
 ```
 
-**Output (sample):**
-
-```bash
-student   tty7   2025-09-09 08:32 (:0)
-```
-
-**Explanation:**
-Shows who is currently logged into the system.
-
 ---
 
 ### 🔹 17. `passwd` – Change Password
-
-**Command:**
 
 ```bash
 passwd
 ```
 
-**Explanation:**
-Prompts to change your password.
-
 ---
 
 ### 🔹 18. `sudo` – Run as Admin
-
-**Command:**
 
 ```bash
 sudo ls /root
 ```
 
-**Output (if allowed):**
-
-```bash
-rootfiles  secrets.txt
-```
-
-**Explanation:**
-Runs commands with **root (admin) privileges**.
+📌 Runs command as root.
 
 ---
 
-### 🔹 19. `find` – Search for Files
-
-**Command:**
+### 🔹 19. `find` – Search Files
 
 ```bash
 find . -name "*.txt"
 ```
 
-**Output:**
-
-```bash
-./file1.txt
-```
-
-**Explanation:**
-Finds files and directories matching a pattern.
-
 ---
 
 ### 🔹 20. `grep` – Search Inside Files
-
-**Command:**
 
 ```bash
 grep "Hello" file1.txt
 ```
 
-**Output:**
+---
+
+### 🔹 21. `chmod` – Change Permissions
 
 ```bash
-Hello Linux
+chmod 755 script.sh
+chmod 644 file.txt
 ```
 
-**Explanation:**
-Searches for text patterns inside files.
+---
+
+### 🔹 22. `chown` – Change Ownership
+
+```bash
+sudo chown chaya:chaya file1.txt
+```
+
+---
+
+### 🔹 23. `df` – Disk Usage
+
+```bash
+df -h
+```
+
+---
+
+### 🔹 24. `du` – Directory Size
+
+```bash
+du -sh Documents/
+```
+
+---
+
+### 🔹 25. `top` – Process Monitor
+
+```bash
+top
+```
+
+📌 Press `q` to quit.
+
+---
+
+### 🔹 26. `ping` – Network Check
+
+```bash
+ping google.com
+```
+
+---
+
+### 🔹 27. `ip a` – Show Network Info
+
+```bash
+ip a
+```
+
+---
+
+### 🔹 28. `netstat` / `ss` – Active Connections
+
+```bash
+netstat -tuln
+ss -tuln
+```
+
+---
+
+### 🔹 29. `apt` – Package Manager
+
+```bash
+sudo apt update
+sudo apt install git
+sudo apt remove git
+```
+
+---
+
+### 🔹 30. `ps` – List Processes
+
+```bash
+ps aux
+```
+
+---
+
+### 🔹 31. `kill` – Kill Process
+
+```bash
+kill 1234
+kill -9 1234
+```
+
+---
+
+### 🔹 32. `shutdown` & `reboot`
+
+```bash
+sudo shutdown now
+sudo shutdown -r now
+```
 
 ---
 
 ## 🧪 Lab File Execution
 
 ### 🔹 Lab3.sh
-
-**Command:**
-
-```bash
-cat Lab3.sh
-```
-
-**Output:**
-
-```bash
-#!/bin/bash
-echo "Hello, Linux World!"
-```
-
-**Run Script:**
 
 ```bash
 ./Lab3.sh
@@ -403,42 +326,20 @@ echo "Hello, Linux World!"
 Hello, Linux World!
 ```
 
-**Explanation:**
-A simple shell script that prints a message.
-
 ---
 
 ### 🔹 Lab5.sh
-
-**Command:**
-
-```bash
-cat Lab5.sh
-```
-
-**Output:**
-
-```bash
-#!/bin/bash
-echo "Today is:"
-date
-```
-
-**Run Script:**
 
 ```bash
 ./Lab5.sh
 ```
 
-**Output (sample):**
+**Output:**
 
 ```bash
 Today is:
-Tue Sep  9 20:45:02 IST 2025
+Tue Sep 9 20:45:02 IST 2025
 ```
-
-**Explanation:**
-Script prints today’s date and time using the `date` command.
 
 ---
 
@@ -446,32 +347,40 @@ Script prints today’s date and time using the `date` command.
 
 **Q1. Difference between `chmod` and `chown`?**
 
-* `chmod` → Changes file **permissions** (read/write/execute).
-* `chown` → Changes file **ownership** (user/group).
+* `chmod` → change permissions (rwx).
+* `chown` → change ownership (user/group).
 
-**Q2. How do you check current directory and user?**
+**Q2. How to check current directory & user?**
 
 ```bash
-pwd       # shows current directory
-whoami    # shows current user
+pwd
+whoami
 ```
+
+**Q3. Why use `sudo`?**
+Runs commands as root with admin privileges.
+
+**Q4. How to stop an unresponsive process?**
+Use `ps aux` to find PID, then `kill -9 PID`.
 
 ---
 
 ## ✅ Conclusion
 
-This lab covered:
+This assignment covered:
 
-* **Basic Linux commands** (navigation, file handling, editing, search, user management).
-* **Lab scripts (Lab3 & Lab5)** for execution practice.
-* Differences between **permissions** and **ownership**.
+* **Basic Linux commands** (navigation, files, search).
+* **Admin commands** (sudo, user management, chmod, chown).
+* **System monitoring** (df, du, top, ps, kill).
+* **Networking & packages** (ping, ip a, apt).
+* **Shutdown & reboot** operations.
+* **Lab scripts** execution (Lab3 & Lab5).
 
-These form the **foundation of Linux usage** for all future labs.
+terminal screenshots 
+![alt text](<lab 1.png>)
+![alt text](<lab 1.2.png>)
 
 ---
 
-```
-
----
 
 

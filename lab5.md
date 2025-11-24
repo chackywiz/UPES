@@ -1,137 +1,116 @@
 
+# 🐧 Lab 5 – Starter Kit & Automation
+
+## 🎯 Objective
+
+The goal of this lab is to build a **starter project environment automatically** using a shell script.
 
 ---
 
-# 📜 `starter_kit.sh`
+## ⚙️ Tasks
+
+### 🔹 1. Shell Script – `starter_kit.sh`
 
 ```bash
 #!/bin/bash
-# starter_kit.sh
-# Script to set up a starter project structure
+# Lab 5 – Starter Kit Script
+# This script sets up a basic project environment with folders and README files.
 
-# Create folder structure
-mkdir -p project/scripts
-mkdir -p project/docs
-mkdir -p project/data
+# Create project structure
+mkdir -p project/scripts project/docs project/data
 
 # Add placeholder README.md in each folder
 echo "# Scripts Folder" > project/scripts/README.md
 echo "# Documentation Folder" > project/docs/README.md
 echo "# Data Folder" > project/data/README.md
-echo "# Main Project Folder" > project/README.md
 
-# Print completion message
-echo "✅ Starter Kit Ready!"
+# Print success message
+echo "Starter Kit Ready!"
 ```
 
----
-
-# 📄 LAB\_extra.md – Starter Kit & Automation
-
----
-
-# 🖥️ Lab 5 – Starter Kit & Automation
-
-## 🎯 Objective
-
-To automate the creation of a **starter project environment** with predefined folders and README files, ensuring consistent structure for new projects.
-
----
-
-## **1. Script Explanation (`starter_kit.sh`)**
+✅ **Make script executable:**
 
 ```bash
-mkdir -p project/scripts
-mkdir -p project/docs
-mkdir -p project/data
+chmod +x starter_kit.sh
 ```
 
-👉 Creates project folders.
-
-* `-p` ensures parent directories are created if they don’t exist.
+✅ **Run script:**
 
 ```bash
-echo "# Scripts Folder" > project/scripts/README.md
-echo "# Documentation Folder" > project/docs/README.md
-echo "# Data Folder" > project/data/README.md
-echo "# Main Project Folder" > project/README.md
+./starter_kit.sh
 ```
 
-👉 Adds placeholder `README.md` in each folder so structure is clear.
+---
+
+### 🔹 2. Output (Sample Screenshot)
+
+When you run the script, your terminal should show:
 
 ```bash
-echo "✅ Starter Kit Ready!"
+kali@kali:~$ ./starter_kit.sh
+Starter Kit Ready!
 ```
-
-👉 Prints success message when setup is done.
 
 ---
 
-## **2. Example Run**
+### 🔹 3. Documentation – `LAB_extra.md`
 
-### ▶ Run Script
+````markdown
+# 📄 LAB_extra.md – Lab 5 
 
+## 📝 Purpose of Script
+The `starter_kit.sh` script automates the setup of a standard project structure by creating the following folders:
+- `scripts/` → for code or automation scripts  
+- `docs/` → for documentation  
+- `data/` → for datasets or input files  
+
+It also places a placeholder `README.md` in each folder for better organization.  
+
+---
+
+## 🖥️ Example Run
 ```bash
-$ ./starter_kit.sh
-✅ Starter Kit Ready!
-```
+kali@kali:~$ ./starter_kit.sh
+Starter Kit Ready!
+````
 
-### 📂 Project Structure After Run
-
-```bash
-project/
-├── README.md
-├── scripts/
-│   └── README.md
-├── docs/
-│   └── README.md
-└── data/
-    └── README.md
-```
+![Example Run Screenshot](./screenshots/Screenshot%202025-09-10%20003335.png)
 
 ---
 
-## **3. Extra Questions**
+## ❓ Extra Questions
 
-### 🔹 Q1: What does `mkdir -p` do?
+### 1. What does `mkdir -p` do?
 
-* Creates directories **recursively**.
-* If parent folder doesn’t exist, it will be created automatically.
-* Prevents errors if directory already exists.
+* The `-p` flag tells `mkdir` to **create parent directories as needed**.
+* Example:
 
-Example:
+  ```bash
+  mkdir -p project/scripts
+  ```
 
-```bash
-mkdir -p project/scripts
-```
+  If `project/` doesn’t exist, it will be created automatically before making `scripts/`.
 
-Creates both `project/` and `scripts/` if they don’t exist.
+### 2. Why is automation useful in DevOps?
 
----
-
-### 🔹 Q2: Why is automation useful in DevOps?
-
-* Ensures **consistency** → same setup every time.
-* Saves **time** → no need to manually create folders/files.
-* Reduces **human error**.
-* Core principle of DevOps: **automate repetitive tasks** like setup, deployment, and monitoring.
+* Ensures **consistency** → environments are always set up the same way.
+* Saves **time and effort** → no need for manual repetitive tasks.
+* Reduces **human error** → fewer mistakes during setup.
+* Enables **scalability** → large projects and teams can onboard quickly.
 
 ---
 
-## ✅ Conclusion
+## 📦 Deliverables
 
-* Built `starter_kit.sh` to automatically generate a project structure.
-* Confirmed via example run that all folders & README files are created.
-* Learned importance of **automation** in DevOps workflows.
+1. `starter_kit.sh` → Shell script for environment setup.
+2. `LAB_extra.md` → Documentation with purpose, example run, and Q\&A.
+3. `LAB_extra.pdf` → Export of the `.md` file into PDF for submission.
 
----
-
-📌 **Deliverables**:
-
-* `starter_kit.sh` (script)
-* `LAB_extra.md` (this report)
-* PDF version for submission
+````
 
 ---
 
-.
+
+
+---
+

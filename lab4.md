@@ -149,7 +149,7 @@ Use **cron jobs** (Linux scheduler).
 * `backup.sh` (script)
 * `LAB4.md` (report)
 * PDF version for submission
-
----
+terminal screenshots 
+![alt text](<WhatsApp Image 2025-11-18 at 1.21.04 PM.jpeg>)
 
 

@@ -122,5 +122,6 @@ This gives the file **execute permission**, so you can run it as `./scriptname.s
 * `array_loop.sh` demonstrated arrays and looping through them.
 * Key concepts: **loops, arrays, shebang, permissions**.
 
----
-
+---terminal screenshots 
+![alt text](<lab 2.png>)
+![alt text](<lab 2.3.png>)
